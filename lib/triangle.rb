@@ -12,15 +12,19 @@ class Triangle
 
 
   def kind
-    tri_less = a + b <= c || b + c <= a || a + c <= b
-    tri_inequality = a + b > c || b + c > a || a + c > b
-    all_zero = a <= 0 || b <= 0 || c <= 0
-    if tri_inequality && all_zero && tri_less && a == b && a == c && a != 0 && b != 0 && c != 0
+    def kind 
+    zero_or_less = a <= 0 || b <= 0 || c <= 0 
+    inequal = a + b <= c || a + c <= b || b + c <= a
+    if zero_or_less || inequal
+      raise TriangleError
+    elsif a == b && a == c && b == c
       :equilateral
-    elsif tri_inequality && all_zero && tri_less && a == b || a == c || b == c
+    elsif a == c || a == b || b == c
       :isosceles
-    elsif tri_inequality && all_zero && tri_less && a != b && b != c && a != c
+    elsif a != b && a != c && b != c
       :scalene
+    end
+  end
     # all_zero = a <= 0 || b <= 0 || c <= 0
     # less_than_1 = a + b < c || a + c < b || b + c < a
     # not_equilateral = a < b && b > c
