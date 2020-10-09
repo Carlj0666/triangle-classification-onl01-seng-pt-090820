@@ -13,10 +13,10 @@ class Triangle
     
   def kind
     all_zero = a <= 0 || b <= 0 || c <= 0
-    
+    less_than_1 = a + b < c || a + c < b || b + c < a
     if all_zero
       raise TriangleError
-    elsif a + b < c || a + c < b || b + c < a
+    elsif less_than_1
       raise TriangleError
     elsif a == b && a == c
       return :equilateral
