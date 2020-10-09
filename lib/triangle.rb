@@ -12,8 +12,7 @@ class Triangle
   
     
   def kind
-    if a == 0 || b == 0 || c == 0
-      puts error.message
+
     if a == b && a == c
       return :equilateral
       end
@@ -27,6 +26,10 @@ class Triangle
   end
   
 end
+
+
+    # if a == 0 || b == 0 || c == 0
+    #   puts error.message
 
 
     #   begin
