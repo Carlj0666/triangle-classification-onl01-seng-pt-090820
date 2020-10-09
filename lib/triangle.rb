@@ -12,15 +12,9 @@ class Triangle
 
     
   def kind
-
-        if a == b && a == c && c == b && a != 0 || b != 0 || c != 0
+    if a == b && a == c && c == b && a != 0 || b != 0 || c != 0
       return :equilateral
-    elsif a == b || a == c || b == c
-      return :isosceles
-    elsif scalene
-      return :scalene
-    else 
-      raise TriangleError
+
     end
 
     # all_zero = a <= 0 || b <= 0 || c <= 0
@@ -37,8 +31,6 @@ class Triangle
     # elsif scalene
     #   return :scalene
     # end
-
-  end
   
   
   class TriangleError < StandardError
