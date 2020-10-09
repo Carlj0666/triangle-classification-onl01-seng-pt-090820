@@ -15,7 +15,6 @@ class Triangle
 
     if a == b && a == c
       return :equilateral
-      end
     end
   end
   
