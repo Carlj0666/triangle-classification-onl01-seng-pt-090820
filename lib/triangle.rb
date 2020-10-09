@@ -21,6 +21,7 @@ class Triangle
   class TriangleError < StandardError
     def message
       "Your triangle is busted"
+    end
   end
   
 end
