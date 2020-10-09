@@ -4,14 +4,14 @@ class Triangle
   
   attr_accessor :a, :b, :c
   
-  def initialize(a:, b:, c:)
+  def initialize(a, b, c)
     @a = a
     @b = b
     @c = c
   end
   
-  def tri_test(a:, b:, c:)
-    if 
+  def tri_test(a, b, c)
+    if a + b
       begin
       raise PartnerError
       rescue PartnerError => error
@@ -20,7 +20,7 @@ class Triangle
   end
     
     
-  def kind(a:, b:, c:)
+  def kind(a, b, c)
     if a == 0 || b == 0 || c == 0
       return  
     if a == b && a == c
