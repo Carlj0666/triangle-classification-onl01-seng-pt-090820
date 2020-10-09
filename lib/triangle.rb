@@ -17,21 +17,25 @@ class Triangle
       raise TriangleError
       rescue TriangleError => error
       puts error.message
-    end
       
-    if a + b < c || a + c < b || b + c < a
-      begin
-      raise TriangleError
-      rescue TriangleError => error
-      puts error.message
-    end
-    
-    if a == b && a == c
-      return :equilateral
-      elsif a != b && a != c && b != c
-      return :scalene
-    else
-      return :scalene
+      elsif  a + b < c || a + c < b || b + c < a
+        begin
+        raise TriangleError
+        rescue TriangleError => error
+        puts error.message
+      
+        elsif a == b && a == c
+          return :equilateral
+          elsif a != b && a != c && b != c
+          return :scalene
+      
+            else
+              return :scalene
+              end
+            end
+          end
+        end
+      end
     end
    end
   
