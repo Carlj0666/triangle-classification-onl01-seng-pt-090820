@@ -15,7 +15,7 @@ class Triangle
     if a == 0 || b == 0 || c == 0
       begin
       raise TriangleError
-      rescue PartnerError => error
+      rescue TriangleError => error
       puts error.message
     end
       
