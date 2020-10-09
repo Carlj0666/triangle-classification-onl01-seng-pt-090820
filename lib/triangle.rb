@@ -20,11 +20,11 @@ class Triangle
     if all_zero || less_than_1 || not_equilateral || all_greater || all_lesser
       raise TriangleError
     elsif a == b && a == c && a != 0 && b != 0 && c != 0
-      return :equilateral
+      :equilateral
     elsif a == b || a == c || b == c
-      return :isosceles
+      :isosceles
     else
-      return :scalene
+      :scalene
     end
   end
   
