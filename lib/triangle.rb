@@ -14,7 +14,7 @@ class Triangle
   def kind
     if a == b && a == c && c == b && a != 0 || b != 0 || c != 0
       return :equilateral
-
+    end
     end
 
     # all_zero = a <= 0 || b <= 0 || c <= 0
