@@ -9,10 +9,12 @@ class Triangle
     @b = b
     @c = c
   end
-  
+
     
   def kind
-    if a <= 0 || b <= 0 || c <= 0
+    all_zero = a <= 0 || b <= 0 || c <= 0
+    
+    if all_zero
       raise TriangleError
     elsif a + b < c || a + c < b || b + c < a
       raise TriangleError
