@@ -12,10 +12,10 @@ class Triangle
 
 
   def kind
-    equilateral = a == b && a == c
+    sum_zero = a + b + c
     tri_inequality = a + b > c || b + c > a || a + c > b
     all_zero = a <= 0 || b <= 0 || c <= 0 && !
-    if tri_inequality && all_zero && !equilateral && a == b && a == c && a != 0 && b != 0 && c != 0
+    if tri_inequality && all_zero && a == b && a == c && a != 0 && b != 0 && c != 0
       :equilateral
     elsif tri_inequality && all_zero && a == b || a == c || b == c
       :isosceles
