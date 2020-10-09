@@ -10,10 +10,6 @@ class Triangle
     @c = c
   end
   
-  def tri_test(a, b, c)
-    
-  end
-    
     
   def kind(a, b, c)
     if a == 0 || b == 0 || c == 0
