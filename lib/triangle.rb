@@ -9,7 +9,7 @@ class Triangle
   end
   
   def kind
-    :equilateral
+    
     
   end
   
