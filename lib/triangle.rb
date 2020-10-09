@@ -10,11 +10,11 @@ class Triangle
   
   def kind
     if a == 0 || b == 0 || c == 0
-      message 
+      return  
     if a == b && a == c
       return :equilateral
-      elsif a != b && a != c || b != tri_length_a && tri_length_c || tri_length_c != tri_length_a && tri_length_b
-      return :isosceles
+      elsif a != b && a != c && b != c
+      return :scalene
     else
       return :scalene
     end
