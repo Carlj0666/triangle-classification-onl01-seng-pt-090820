@@ -14,7 +14,7 @@ class Triangle
   def kind
     all_zero = a <= 0 || b <= 0 || c <= 0
     less_than_1 = a + b < c || a + c < b || b + c < a
-    not_equilateral = a == b && a == c
+    not_equilateral = a < b && 
     if all_zero
       raise TriangleError
     elsif less_than_1
