@@ -12,30 +12,8 @@ class Triangle
   
     
   def kind
-    # if a == 0 || b == 0 || c == 0
-    #   begin
-    #   raise TriangleError
-    #   rescue TriangleError => error
-    #   puts error.message
+    if a == 0 || b == 0 || c == 0
       
-    #   elsif  a + b < c || a + c < b || b + c < a
-    #     begin
-    #     raise TriangleError
-    #     rescue TriangleError => error
-    #     puts error.message
-      
-    #     elsif a == b && a == c
-    #       return :equilateral
-    #       elsif a != b && a != c && b != c
-    #       return :scalene
-      
-    #         else
-    #           return :scalene
-    #           end
-    #         end
-    #       end
-    #     end
-    #   end
     end
   
   class TriangleError < StandardError
