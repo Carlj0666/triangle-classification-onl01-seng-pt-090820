@@ -11,7 +11,7 @@ class Triangle
   end
   
   def tri_test(a, b, c)
-    if a + b
+    if a + b < c || a + c < b || b + c < a
       begin
       raise PartnerError
       rescue PartnerError => error
