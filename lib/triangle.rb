@@ -15,10 +15,10 @@ class Triangle
 
     all_zero = a <= 0 || b <= 0 || c <= 0
     less_than_1 = a + b < c || a + c < b || b + c < a
-    not_equilateral = a < b && b > c
+    #not_equilateral = a < b && b > c
     scalene = a > b && b > c && a != c
     all_lesser = a < b && b < c
-    if all_zero || less_than_1 || not_equilateral || all_lesser
+    if all_zero || less_than_1 || all_lesser
       raise TriangleError
     elsif a == b && a == c && c == b && a != 0 || b != 0 || c != 0
       return :equilateral
