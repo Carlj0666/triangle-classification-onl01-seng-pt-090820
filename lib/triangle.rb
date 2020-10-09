@@ -17,7 +17,7 @@ class Triangle
     not_equilateral = a < b && b > c
     all_greater = a > b && b > c
     all_lesser = a < b && b < c
-    if all_zero || less_than_1 || not_equilateral || all_greater
+    if all_zero || less_than_1 || not_equilateral || all_greater || all_lesser
       raise TriangleError
     elsif a == b && a == c && a != 0 && b != 0 && c != 0
       return :equilateral
