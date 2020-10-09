@@ -13,7 +13,11 @@ class Triangle
     
   def kind
     if a == 0 || b == 0 || c == 0
-      
+      begin
+        raise PartnerError
+      rescue PartnerError => error
+          puts error.message
+      end
     end
   
   class TriangleError < StandardError
