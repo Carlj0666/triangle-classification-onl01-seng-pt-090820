@@ -13,9 +13,12 @@ class Triangle
     
   def kind
     if a == 0 || b == 0 || c == 0
+      puts error.message
+    if a == b && a == c
       return :equilateral
+      end
     end
-    end
+  end
   
   class TriangleError < StandardError
     def message
@@ -24,3 +27,11 @@ class Triangle
   end
   
 end
+
+
+    #   begin
+    #     raise TriangleError
+    #   rescue TriangleError => error
+    #       puts error.message
+    #   end
+    # end
