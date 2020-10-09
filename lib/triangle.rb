@@ -13,7 +13,9 @@ class Triangle
     
   def kind
     if a == b && a == c && c == b && a != 0 || b != 0 || c != 0
-      return :equilateral
+        return :equilateral
+      elsif a == b || a == c || b == c
+        return :isosceles
     end
     end
 
