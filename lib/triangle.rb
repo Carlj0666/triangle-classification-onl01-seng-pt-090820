@@ -12,7 +12,7 @@ class Triangle
 
     
   def kind
-      a, b, c = [a, b, c].sort
+      triangle_mod = [a, b, c].sort
   raise TriangleError if a <= 0 or a + b <= c
   return :equilateral if a == c
   return :isosceles if a == b or b == c
