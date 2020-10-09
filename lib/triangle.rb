@@ -12,9 +12,9 @@ class Triangle
 
 
   def kind
-    zero_or_less = a <= 0 || b <= 0 || c <= 0 
-    inequal = a + b <= c || a + c <= b || b + c <= a
-    if zero_or_less || inequal
+    sub_zero = a <= 0 || b <= 0 || c <= 0 
+    less_than_equal = a + b <= c || a + c <= b || b + c <= a
+    if sub_zero || less_than_equal
       raise TriangleError
     elsif a == b && a == c && b == c
       :equilateral
@@ -22,7 +22,6 @@ class Triangle
       :isosceles
     elsif a != b && a != c && b != c
       :scalene
-
     end
   end
   
