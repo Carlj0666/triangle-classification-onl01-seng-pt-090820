@@ -20,7 +20,6 @@ class Triangle
 end
   
   class TriangleError < StandardError
-    if 
   end
   
 end
