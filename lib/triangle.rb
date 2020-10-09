@@ -12,15 +12,16 @@ class Triangle
   
     
   def kind
-    
-    if a == b && a == c
+    if a == 0 || b == 0 || c == 0
+      
+    elsif a == b && a == c
       return :equilateral
     elsif a == b || a == c || b == c
       return :isosceles
     else
       return :scalene
     end
-    if a == 0 || b == 0 || c == 0
+    
       begin
       raise TriangleError
       rescue TriangleError => error
