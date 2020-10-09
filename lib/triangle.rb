@@ -17,7 +17,7 @@ class Triangle
       return :equilateral
     end
     if a == b || a == c || b == c
-      return 
+      return :isosceles
   end
   
   class TriangleError < StandardError
