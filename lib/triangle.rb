@@ -19,7 +19,6 @@ class Triangle
       :isosceles
     elsif tri_inequality && a != b && b != c && a != c
       :scalene
-      elsif 
     # all_zero = a <= 0 || b <= 0 || c <= 0
     # less_than_1 = a + b < c || a + c < b || b + c < a
     # not_equilateral = a < b && b > c
