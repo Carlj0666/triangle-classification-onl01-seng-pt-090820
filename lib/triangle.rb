@@ -16,6 +16,8 @@ class Triangle
     if a == b && a == c
       return :equilateral
     end
+    if a == b || a == c || b == c
+      return 
   end
   
   class TriangleError < StandardError
