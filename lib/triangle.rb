@@ -13,6 +13,7 @@ class Triangle
 
   def kind
     tri_inequality = a + b > c || b + c > a || a + c > b
+    all_zero = a <= 0 || b <= 0 || c <= 0
     if tri_inequality && a == b && a == c && a != 0 && b != 0 && c != 0
       :equilateral
     elsif tri_inequality && a == b || a == c || b == c
