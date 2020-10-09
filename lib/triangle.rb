@@ -10,7 +10,17 @@ class Triangle
     @c = c
   end
   
-  def kind
+  def tri_test(a:, b:, c:)
+    if 
+      begin
+      raise PartnerError
+      rescue PartnerError => error
+      puts error.message
+    end
+  end
+    
+    
+  def kind(a:, b:, c:)
     if a == 0 || b == 0 || c == 0
       return  
     if a == b && a == c
