@@ -20,7 +20,7 @@ class Triangle
     all_lesser = a < b && b < c
     if all_zero || less_than_1 || not_equilateral || all_lesser
       raise TriangleError
-    elsif a == b && a == c && c == b && a != 0 && b != 0 && c != 0
+    elsif a == b && a == c && c == b && a != 0 || b != 0 || c != 0
       return :equilateral
     elsif a == b || a == c || b == c
       return :isosceles
