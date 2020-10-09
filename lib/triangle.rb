@@ -18,4 +18,8 @@ class Triangle
     end
   end
   
+  class TriangleError < StandardError
+    if 
+  end
+  
 end
