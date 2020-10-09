@@ -27,6 +27,7 @@ class Triangle
     def message
       "Your triangle is busted"
     end
+  end
   
 end
 
