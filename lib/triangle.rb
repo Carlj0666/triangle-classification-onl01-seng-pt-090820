@@ -12,7 +12,6 @@ class Triangle
 
 
   def kind
-    def kind 
     zero_or_less = a <= 0 || b <= 0 || c <= 0 
     inequal = a + b <= c || a + c <= b || b + c <= a
     if zero_or_less || inequal
